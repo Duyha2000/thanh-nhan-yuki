@@ -1,0 +1,131 @@
+.infoUser table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    color: #fff;
+    padding: 10px;
+}
+.infoUser table th {
+    color: var(--primary-color);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 30px 5px;
+}
+
+
+.infoUser table td:first-child {
+    font-weight: bold;
+    text-align: left;
+}
+
+.infoUser input {
+    font-size: 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition-duration: .15s;
+    border: 1px solid #aaa;
+    margin: 10px;
+}
+
+.infoUser input:read-only {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border: 1px solid transparent;
+}
+
+/* Nút Edit thông tin */;
+.infoUser .fa-pen-to-square {
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1em;
+    padding: 7px;
+    transition-duration: .2s;
+    cursor: pointer;
+}
+
+.infoUser .fa-pen-to-square:hover {
+    color: mediumspringgreen;
+    cursor: pointer;
+}
+
+/* Thay đổi mật khẩu */
+#khungDoiMatKhau {
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    cursor: pointer;
+}
+#khungDoiMatKhau tr td {
+    padding: 0;
+}
+#khungDoiMatKhau tr td div {
+    max-height: 0;
+    overflow: hidden;
+    transition-duration: 0.3s;
+}
+
+/* active */
+#khungDoiMatKhau.active, #khungDoiMatKhau.active tr td {
+    padding: 5px 0;
+}
+#khungDoiMatKhau.active td div {
+    max-height: 50px;
+    transition-duration: 0.6s;
+}
+
+#khungDoiMatKhau button {
+    margin-left: 90px;
+}
+/* button accept */
+.button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 12px;
+    border: mediumspringgreen solid 0.15em;
+    border-radius: 0.25em;
+    color: mediumspringgreen;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border 300ms, color 300ms;
+    user-select: none;
+  }
+  .button p {
+    z-index: 1;
+  }
+  .button:hover {
+    color: #fff;
+  }
+  .button:active {
+    border-color: teal;
+  }
+  .button::after, .button::before {
+    content: "";
+    position: absolute;
+    width: 9em;
+    aspect-ratio: 1;
+    background: mediumspringgreen;
+    opacity: 50%;
+    border-radius: 50%;
+    transition: transform 500ms, background 300ms;
+  }
+  .button::before {
+    left: 0;
+    transform: translatex(-8em);
+  }
+  .button::after {
+    right: 0;
+    transform: translatex(8em);
+  }
+  .button:hover:before {
+    transform: translatex(-1em);
+  }
+  .button:hover:after {
+    transform: translatex(1em);
+  }
+  .button:active:before,
+  .button:active:after {
+    background: teal;
+  }

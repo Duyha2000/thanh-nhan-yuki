@@ -1,0 +1,96 @@
+.container {
+	position: relative;
+	font-family: sans-serif;
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+.container::before,
+.container::after {
+	content: "";
+	background-color: #ff8f9c84;
+	position: absolute;
+}
+
+.container::before {
+	border-radius: 50%;
+	width: 10rem;
+	height: 15rem;
+	top: 22%;
+	right: 37%;
+}
+
+.container::after {
+	content: "";
+	position: absolute;
+	height: 3rem;
+	top: 3%;
+	right: 37%;
+	border: 1px solid #fff;
+}
+
+.container .box {
+	width: 20rem;
+	height: 28rem;
+	padding: 1rem;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	backdrop-filter: blur(20px);
+	border-radius: .7rem;
+	transition: all ease .3s;
+}
+
+.container .box {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.container .box .title {
+	text-transform: uppercase;
+	font-size: 2rem;
+	font-weight: 600;
+	letter-spacing: .1em;
+	color: #ff8f9c;
+	
+}
+
+.container .box div strong {
+	display: block;
+	color: #fff;
+}
+.container .box div .box-list{
+	font-size: .8em;
+	font-weight: 600;
+	margin-top: 5px;
+	display: block;
+	color: #fff;
+}
+.container .box div p {
+	margin: 0;
+	font-size: .8em;
+	font-weight: 300;
+	letter-spacing: .2em;
+	color: #fff;
+	margin: 1rem 0;
+}
+
+.container .box div span {
+	font-size: .7rem;
+	font-weight: 300;
+	color: #fff;
+}
+
+.container .box div span:nth-child(3) {
+	font-weight: 500;
+	margin-right: .2rem;
+	color: #fff;
+}
+
+.container .box:hover {
+	box-shadow: 0px 0px 100px 1px #ff8f9c5b;
+	border: 1px solid rgba(255, 255, 255, 0.454);
+}
+.container .box .note{
+	color: #fff;
+}

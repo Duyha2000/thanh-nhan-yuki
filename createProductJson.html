@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Create Product code</title>
+
+	<!-- Load font awesome icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" type="text/css" href="css/home_products.css">
+
+	<script src="data/products.js"></script>
+	<script src="js/classes.js"></script>
+	<script src="js/global.js"></script>
+
+	<style>
+		* { 
+			outline: none; 
+			font-family: sans-serif; 
+		}
+		
+		table {
+			padding: 5px 3px;
+			border : 1px solid #333;
+			margin: 10px auto;
+		}
+		td {
+			padding: 5px 3px;
+			border-bottom: 1pt solid #333;
+		}
+		input {
+			padding: 5px 3px;
+			height: 26px;
+			font-size: 20px;
+		}
+		button {
+			border-radius: 10px;
+			margin: 10px auto;
+			font-size: 20px;
+			padding: 10px 5px;
+			border: none;
+			cursor: pointer;
+			background: #487;
+		}
+		button:hover {
+			background: #4a7;
+		}
+		textarea {
+			padding: 5px 3px;
+			font-size: 16px;
+		}
+		.homeproduct li {
+			width: 250px;
+		}
+	</style>
+
+	<script>
+		// AddProducts vào trang
+		function addProduct(p, id) {
+			promo = new Promo(p.promo.name, p.promo.value); // class Promo
+			product = new Product(p.img, p.name, p.price, p.star, p.rateCount, promo); // Class product
+			addToWeb(product, id);
+		}
+		function getResult() {
+			var name = document.getElementById('name').value;
+			var type = document.getElementById('type').value;
+			var img = document.getElementById('img').value;
+			var price = document.getElementById('price').value;
+			var star = document.getElementById('star').value || 0;
+			var rateCount = document.getElementById('rateCount').value || 0;
+			var promoName = document.getElementById('promoName').value;
+			var promoValue = document.getElementById('promoValue').value;
+
+			if(img.indexOf('http') < 0) {
+				img = "img/products/"+ img;	
+			}
+return {
+	"name": name,
+	"type": type,
+	"img": img,
+	"price": price,
+	"star": star,
+	"rateCount": rateCount,
+	"promo": {
+		"name": promoName,
+		"value": promoValue
+	}
+};
+		}
+
+		function saveToDatabase() {
+			var r = getResult();
+			if(!r.name || !r.price) {
+				alert('Name or Price has been entered yet');
+				return;
+			}
+
+			addProduct(r, 'products');
+			var textarea = document.getElementById('t_a');
+			if(textarea.innerHTML == '')
+				textarea.innerHTML += JSON.stringify(r, null, "\t");
+			else textarea.innerHTML += ',\n'+JSON.stringify(r, null, "\t");
+		}
+
+		function valueChange() {
+			document.getElementById('live').innerHTML = '';
+			addProduct(getResult(), 'live');
+		}
+
+		window.onload = function() {
+			var inp = document.getElementsByTagName('input');
+			for(var i = 0; i < inp.length; i++) {
+				inp[i].onkeyup = valueChange;
+			}
+			document.getElementById('type').onchange = valueChange;
+		}
+	</script>
+
+</head>
+
+<body>
+	<table>
+		<tr>
+			<td>
+				<table cellpadding="7">
+					<tr>
+						<td>Products:</td>
+						<td><input id="name" type="text" onchange=""></td>
+					</tr>
+					<tr>
+						<td>Type:</td>
+						<td>
+							<select name="" id="type">
+								<option value="Mac">Mac</option>
+								<option value="Iphone">Iphone</option>
+								<option value="Airpods">Airpods</option>
+								<option value="Ipad">Ipad</option>
+								<option value="Watch">Watch</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Name Image </td>
+						<td><input id="img" type="text"></td>
+					</tr>
+					<tr>
+						<td>Price:</td>
+						<td><input id="price" type="text"></td>
+					</tr>
+					<tr>
+						<td>Rate (Star 0->5):</td>
+						<td><input id="star" type="text"></td>
+					</tr>
+					<tr>
+						<td>Number of rated:</td>
+						<td><input id="rateCount" type="text"></td>
+					</tr>
+					<tr>
+						<td>Promo:</td>
+						<td>
+							<select name="km" id="promoName" onchange="valueChange()">
+								<option value="">No Promo</option>
+								<option value="tragop">Installment</option>
+								<option value="giamgia">Discount</option>
+								<option value="moiramat">New</option>
+								<option value="giareonline">Shockings Prices Online</option>
+							</select>
+
+						</td>
+					</tr>
+					<tr>
+						<td>Promo value:</td>
+						<td><input id="promoValue" type="text"></td>
+					</tr>
+				</table>
+			</td>
+
+			<td>
+				<ul class="homeproduct group flexContain" id="live"></ul>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<button onclick="saveToDatabase()">Save to database</button>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<ul class="homeproduct" id="products"></ul>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<p>Database results:</p>
+				<textarea rows="13" cols="70" id="t_a"></textarea>
+			</td>
+		</tr>
+	</table>
+
+</body>
+
+</html>

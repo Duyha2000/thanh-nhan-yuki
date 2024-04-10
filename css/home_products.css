@@ -1,0 +1,198 @@
+#noProduct {
+	opacity: 0;
+	width: 0;
+	color: #ff8f9c;
+	font-size: 30px;
+	font-weight: bold;
+	height: 310px;
+}
+
+/* Home Product */
+.homeproduct {
+	list-style-type: none;
+}
+
+/* <li> trong homeproduct có class="sanPham" , khai báo trong classes.js */
+.sanPham {
+	width: 238px;
+	border: 1px solid #000000;
+	transition-duration: .3s;
+	margin-bottom: 20px;
+}
+
+.sanPham a {
+	border-radius: 10px;
+	margin-left: 10px;
+	background-color: #ffffffe9;
+	box-shadow: rgba(128, 128, 128, 0.11) 0px 0.4px 0.4px,
+		rgba(128, 128, 128, 0.157) 0px 1px 1px,
+		rgba(128, 128, 128, 0.196) 0px 2.1px 2.1px,
+		rgba(128, 128, 128, 0.24) 0px 4.4px 4.4px,
+		rgba(128, 128, 128, 0.35) 0px 12px 12px;
+	display: block;
+	position: relative;
+	padding: 10px 0;
+	height: 310px;
+}
+.sanPham a:hover > img {
+	margin: 5px auto 25px;
+}
+.sanPham a .price span {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 12px;
+	text-decoration: line-through;
+	margin-left: 5px;
+	color: #222;
+}
+
+/* Name and image */
+/* Hinh anh san pham */
+.sanPham a img {
+	display: block;
+	margin: 15px auto;
+	transition-duration: 0.2s;
+	width: 200px;
+	height: 200px;
+}
+
+/* Ten san pham */
+.sanPham h3 {
+	display: block;
+	padding: 0 10px;
+	color: #000;
+	line-height: 1.3em;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+/* Hightlight name san pham khi hover */
+.sanPham a:hover h3 {
+	color: #1191f8;
+}
+
+/* ====== End Name and image ===== */
+
+/* Price */
+/* la div chua strong */
+.sanPham .price {
+	display: block;
+	padding: 5px 10px 0px 10px;
+}
+
+/* strong la gia tien in dam */
+.sanPham strong {
+	display: inline-block;
+	vertical-align: middle;
+	overflow: hidden;
+	font-size: 14px;
+	color: #ff0d00;
+	line-height: 15px;
+}
+
+/* ===== End Price ===== */
+
+/* Rating */
+.sanPham .ratingresult {
+	padding: 5px 10px;
+}
+
+.sanPham .ratingresult span {
+	display: inline-block;
+	/* position: relative; */
+	top: 1px;
+	margin-left: 5px;
+	vertical-align: middle;
+	text-decoration: none;
+	font-size: 12px;
+	color: #777;
+}
+
+.fa-star,
+.fa-star-o {
+	color: orange;
+}
+
+/* ===== End Rating ===== */
+
+/* Khuyen mai */
+/* label la tag khuyen mai */
+.sanPham label {
+	display: inline-block;
+	position: absolute;
+	top: 13px;
+	left: 8px;
+	font-size: 14px;
+	color: #fff;
+	font-weight: 600;
+	text-align: center;
+	border-radius: 10px;
+	padding: 3px 5px 0;
+	height: 18px;
+}
+
+/* Giam gia thanh */
+.sanPham label.giamgia {
+	background-image: linear-gradient(90deg, #ff9c00 0%, #ec1f1f 100%);
+	border-radius: 10px;
+	padding: 1px 7px;
+	padding-left: 0;
+	padding-right: 10px;
+}
+
+/* Kí tự sấm sét */
+.fa-bolt {
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 50%;
+	background: #f21;
+	color: white;
+}
+
+/* Tra gop 0% */
+.sanPham label.tragop {
+	background: #f28902;
+}
+
+/* Gia re online */
+.sanPham label.giareonline {
+	background: #3fb846;
+}
+
+/* Moi ra mat */
+.sanPham label.moiramat {
+	background: #1191f8;
+}
+
+/* ===== End Khuyen mai ====== */
+
+/* ===== Add to cart ==== */
+/* tooltip được css bên style.css */
+.addToCart {
+	z-index: 20;
+	border: 2px solid #948c8c56;
+	border-radius: 50%;
+	width: 1.5em;
+	height: 1.5em;
+	font-size: 1.5em;
+	color: #000;
+	background: none;
+	transition-duration: .2s;
+	cursor: pointer;
+}
+
+.addToCart:hover{
+	color: #fff;
+	background-color: #ff8f9c;
+	box-shadow: 0px 8px 10px 0px rgba(228, 225, 225, 0.2);	
+}
+
+
+.addToCart:active {
+	box-shadow: none;
+}
+
+/* ===== End Them Vao Gio Hang ==== */
+/* ====== End Home Product ======= */

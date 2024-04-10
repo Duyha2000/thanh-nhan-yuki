@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contact - Yuki Store</title>
+  <link rel="shortcut icon" href="/favicon.png" />
+
+  <!-- Load font awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous">
+  <!-- simple line   -->
+  <link rel='stylesheet'
+    href='https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.2.4/css/simple-line-icons.min.css' />
+  <!--ionicon link-->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+  <!-- owl carousel libraries -->
+  <link rel="stylesheet" href="js/owlcarousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="js/owlcarousel/owl.theme.default.min.css">
+  <script src="js/Jquery/Jquery.min.js"></script>
+  <script src="js/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- our files -->
+  <!-- bootrap css -->
+  <!-- <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'> -->
+
+  <!-- font -->
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,400,700" rel="stylesheet">
+
+  <!-- css -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/topnav.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/account.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/contact.css">
+
+  <!-- js -->
+  <script src="data/products.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/contact.js"></script>
+
+</head>
+
+<body>
+  <script> addTopNav();</script>
+
+  <section style="min-height: 85vh">
+    <script> addHeader(); </script>
+
+
+    <section id="contact">
+
+      <h1 class="contact-section-header">Contact</h1>
+
+      <div class="contact-wrapper">
+
+        <form name="contactform" id="contactform" class="form-horizontal" role="form" onsubmit="return user()"">
+                 
+          <div class=" form-group">
+            
+          <div class="contactform-input">
+            <input type="text" class="form-control" id="name" placeholder="FULL NAME" name="name" value="" required>
+          </div>
+      </div>
+
+      <div class="form-group">
+        <div class="contactform-input">
+          <input type="text" class="form-control" id="phone" placeholder="PHONE NUMBER" name="phone" value="" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="contactform-input">
+          <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="contactform-input">
+          <input type="text" class="form-control" id="title" placeholder="TITLE" name="title" value="" required>
+        </div>
+      </div>
+
+      <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+
+      <button class="send-button" id="submit" type="submit" value="SEND">
+        <div class="alt-send-button">
+          <i class="fa fa-paper-plane"></i>
+          <span class="send-text">SEND</span>
+        </div>
+      </button>
+
+      </form>
+
+      <div class="direct-contact-container">
+
+        <ul class="contact-list">
+          <li class="list-item">
+            <i class="fa fa-map-marker fa-2x">
+              <span class="contact-text place">HCM, TAN BINH DISTRICT</span>
+            </i>
+          </li>
+
+          <li class="list-item">
+            <i class="fa fa-phone fa-2x">
+              <span class="contact-text phone">
+                <a href="tel:1-212-555-5555" title="Give me a call">
+                  (123) 456-7890
+                </a>
+              </span>
+            </i>
+          </li>
+
+          <li class="list-item">
+            <i class="fa fa-envelope fa-2x">
+              <span class="contact-text gmail">
+                <a href="mailto:#" title="Send me an email">
+                  hello@yukistore.com
+                </a>
+              </span>
+            </i>
+          </li>
+
+        </ul>
+
+        <hr>
+        <ul class="social-media-list">
+          <li><a href="#" target="_blank" class="contact-icon">
+              <i class="fa fa-facebook" aria-hidden="true"></i></a>
+          </li>
+          <li><a href="#" target="_blank" class="contact-icon">
+              <i class="fa fa-twitter" aria-hidden="true"></i></a>
+          </li>
+          <li><a href="#" target="_blank" class="contact-icon">
+              <i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </li>
+          <li><a href="#" target="_blank" class="contact-icon">
+              <i class="fa fa-google" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+        <hr>
+
+        <div class="copyright">&copy; YUKI STORE</div>
+
+      </div>
+
+      </div>
+
+      <!-- Map -->
+      <!-- https://www.maps.ie/create-google-map/ -->
+      <div class="map-header">YUKI STORE LOCATION</div>
+      <div class="info-map" style="width: 100%">
+
+        <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+          src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=T%E1%BA%A7ng%203,%20T%C3%B2a%20nh%C3%A0%20TSA,%2077%20L%C3%AA%20Trung%20Ngh%C4%A9a,%20ph%C6%B0%E1%BB%9Dng%2012,%20T%C3%A2n%20B%C3%ACnh+(YUKI%20STORE)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" />
+        <a href="https://www.maps.ie/population/">Yuki store location (google map)</a>
+        </iframe>
+
+      </div>
+    </section>
+  </section>
+
+  <script>
+    AddContainAccount();
+  </script>
+
+  <div class="footer">
+    <script>
+      addFooter();
+    </script>
+
+  </div>
+
+  <i class="fa-solid fa-caret-up" id="goto-top-page" onclick="gotoTop()"></i>
+
+</body>
+
+</html>

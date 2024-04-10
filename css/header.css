@@ -1,0 +1,259 @@
+/* Header */
+.header {
+	position: sticky;
+	top: 0;
+	z-index: 12;
+	background-color: #000;
+	/* background-color: white; */
+	padding: 15px 0 5px 0;
+	border-bottom: 3px solid #d8d5d5;
+}
+
+/* Logo */
+.header .logo {
+	width: 160px;
+	height: 60px;
+	float: left;
+	transition-duration: .1s;
+}
+
+.header .logo:hover {
+	transform: scale(1.05)
+}
+
+.header .logo img {
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+}
+
+/* ======= End logo ======== */
+
+/* Content */
+.header .content {
+	/* trừ width cua logo */
+	width: calc(100% - 200px);
+	float: left;
+}
+
+/* Search */
+.search-header {
+    float: left;
+}
+
+form.input-search {
+    margin-left: 20px;
+    background: #ff8f9c;
+    border: 2px solid #ea7b7bb6;
+    border-radius: 10px;
+    height: 35px;
+    width: 400px;
+}
+
+.input-search input {
+    float: left;
+    padding-left: 15px;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    height: 100%;
+    width: calc(100% - 60px);
+    transition-duration: 0.3s;
+    outline: none; 
+}
+
+
+.input-search button {
+    float: right;
+    font-size: 12px;
+    padding: 10px 16px;
+    color: #ffffff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.input-search button:hover {
+	font-size: 14px;
+}
+
+/* tags */
+.tags {
+	margin: 8px 0 0 20px;
+	font-size: 13px;
+}
+.tags > strong{
+	margin-left: 8px;
+	color: #ddd;
+	font-weight: 600;
+}
+.tags a {
+	color: rgb(156, 154, 154);
+	padding: 0 14px;
+}
+
+.tags a:hover {
+	color: #ff8f9c;
+	text-decoration: underline;
+}
+
+
+.autocomplete {
+	position: relative;
+	height: 100%;
+}
+
+.autocomplete-items {
+	position: absolute;
+	border: 2px solid #d4d4d4;
+	border-bottom: none;
+	border-top: none;
+	z-index: 99;
+	top: 100%;
+	left: 0;
+	right: 0;
+}
+
+.autocomplete-items div {
+	padding: 10px;
+	cursor: pointer;
+	background-color: #fff;
+	border-bottom: 1px solid #d4d4d4;
+}
+
+.autocomplete-items div:hover {
+	background-color: #888;
+}
+
+.autocomplete-active {
+	background-color: #ff8f9c !important;
+	color: #ffffff;
+}
+/* End auto complete */
+/* ======= End search ========== */
+
+/* Tools Member */
+.tools-member {
+	float: right;
+	display: table;
+	margin-left: 10px;
+	font-size: 14px;
+}
+
+.tools-member a {
+	position: relative;
+	padding: 5px 0;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	color: rgba(217, 212, 212, 0.782);;
+	/* color: rgb(69, 69, 69); */
+	cursor: pointer;
+}
+
+
+.tools-member a:hover>i {
+	border: 2px solid #fff;
+	background-color: rgb(255, 143, 156);
+	color: #fff;
+}
+
+.tools-member i {
+	padding: 10px;
+	border-radius: 30%;
+	border: 2px solid #ccc;
+	background-color: #fff;
+	color: #000;
+	transition: 0.2s;
+}
+
+.tools-member .fa-user {
+	padding: 10px 12.5px;
+}
+
+.tools-member .fa-shopping-cart {
+	padding: 10px;
+}
+
+/* Member */
+.member {
+	position: relative;
+	float: left;
+	display: table-cell;
+}
+
+.member:hover>.menuMember {
+	z-index: 20;
+	transform: translateX(-40%) scale(1);
+}
+
+.member .menuMember {
+	position: absolute;
+	left: 0;
+	text-align: center;
+	border-radius: 5px;
+	background-color: #908585;
+	min-width: 170px;
+	transition-duration: .15s;
+	transform: translateX(-40%) scale(0);
+}
+
+.member .menuMember a {
+	color: #292727;
+	display: block;
+	padding: 10px 0;
+}
+
+.member .menuMember a:hover {
+	border-radius: 5px;
+	background-color: #ff8f9c;
+	color: #eee;
+}
+
+.member .hide {
+	display: none;
+}
+
+/* ======= End Member ======= */
+
+/* Cart */
+.cart {
+	float: left;
+	display: table-cell;
+	margin: 0 10px;
+	padding-left: 5px;
+}
+
+.cart-number {
+	position: absolute;
+	left: 4.6em;
+	bottom: -0.15em;
+	font-weight: 600;
+	font-size: 1em;
+	color: #ff6666;
+	border-radius: 50%;
+	width: 2em;
+	height: 2em;
+	line-height: 2em;
+	text-align: center;
+}
+
+.cart .cart-number {
+	transition-duration: .2s;
+}
+
+/* ======= End Cart ======== */
+
+/* Check Order*/
+.check-order {
+	float: left;
+	display: table-cell;
+	border-left: 1px solid #bbb;
+	margin-left: 5px;
+	padding-left: 5px;
+}
+
+/* ======= End Check Order ======= */
+/* ======= End Tools Member ======= */
+/* ======= End Content ========= */
+/* ======= End header ======== */

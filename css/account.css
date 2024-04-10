@@ -1,0 +1,357 @@
+/* reset */
+:root {
+  --primary-color: #ff8f9c;
+}
+
+/* contain */
+.containAccount {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 14;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: .2s ease;
+  transform: scale(0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Courier New', Courier, monospace;
+  /* ẩn đi lúc vào web */
+}
+
+.containAccount .close {
+  /* nút tắt form */
+  position: fixed;
+  top: 15px;
+  right: 35px;
+  font-size: 4rem;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  text-align: center;
+  color: rgb(120, 120, 120);
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.containAccount .close:hover {
+  color: #fff;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
+.account {
+  padding: 40px;
+  max-width: 600px;
+  margin: 30px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.account a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: .2s ease;
+}
+
+.account a:hover {
+  color: var(--primary-color);
+}
+
+/* tab group */
+.tab-group {
+  list-style: none;
+  padding: 0;
+  margin: auto;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+}
+
+.tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tab-group .active a {
+  background: var(--primary-color);
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  z-index: 0;
+}
+
+.tab-group li {
+  float: left;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.tab-group li a {
+  padding: 8px 0;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  color: var(--primary-color);
+  font-size: 20px;
+  float: left;
+  width: 99%;
+  text-align: center;
+  cursor: pointer;
+  transition: .5s ease;
+  text-decoration: none;
+  box-shadow: rgba(128, 128, 128, 0.11) 0px 0.4px 0.4px, rgba(128, 128, 128, 0.157) 0px 1px 1px, rgba(128, 128, 128, 0.196) 0px 2.1px 2.1px, rgba(128, 128, 128, 0.24) 0px 4.4px 4.4px, rgba(128, 128, 128, 0.35) 0px 12px 12px;
+};
+
+
+.tab-group li a:hover {
+  background: var(--primary-color);
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.tab-content>div {
+  display: block;
+}
+
+.tab-content>div:last-child {
+  display: none;
+}
+
+/* mini */
+.account label {
+  position: absolute;
+  transform: translateY(6px);
+  left: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.25s ease;
+  backface-visibility: hidden;
+  pointer-events: none;
+  font-size: 18px;
+}
+.row label{
+  font-size: 14px;
+}
+.account label .req {
+  margin: 2px;
+  color: var(--primary-color);
+}
+
+.account label.active {
+  transform: translateY(-25px);
+  left: 2px;
+  font-size: 14px;
+}
+.row label.active{
+  transform: translateY(-14px);
+  font-size: 10px;
+}
+.account label.active .req {
+  opacity: 0;
+}
+
+.account label.highlight {
+  color: #ff8f9c;
+}
+
+.account input,
+.account textarea {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+  border-radius: 0;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+/* Input */
+.form-input-material {
+  --input-default-border-color: white;
+  --input-border-bottom-color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  display: flex;
+}
+
+.form-input-material input {
+  color: white;
+  z-index: 1;
+  position: relative;
+
+}
+
+.register-form .form-input-material,
+.login-form .form-input-material {
+  margin: 20px 0;
+}
+
+.form-input-material {
+  --input-valid-border-color: var(--primary-color);
+  position: relative;
+  border-bottom: 1px solid var(--input-border-bottom-color);
+}
+
+.form-input-material::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: .125rem;
+  background: var(--input-valid-border-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: .3s
+}
+
+.form-input-material:focus-within::before {
+  transform: scaleX(1)
+}
+
+.form-input-material label {
+  position: absolute;
+  top: .5rem;
+  left: 0;
+  transition: .3s;
+  transform-origin: left;
+  cursor: auto;
+}
+
+.form-input-material .form-control-material {
+  padding: .5rem 0;
+  background: 0 0;
+  border: none;
+  appearance: none;
+  outline: 0;
+}
+
+/* btn */
+.btn {
+  margin-top: 20px;
+  padding: 8px 20px;
+  border-radius: 0;
+  overflow: hidden;
+  --btn-padding: 0.75rem 4.5rem;
+  --btn-radius: 4px;
+  position: relative;
+  padding: var(--btn-padding);
+  color: var(--btn-color, #000);
+  background: var(--btn-bg, #fff);
+  border: var(--btn-border);
+  border-radius: var(--btn-radius);
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btn::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, var(--primary-color), transparent);
+  transform: translateX(-100%);
+  transition: 0.6s;
+}
+
+.btn:hover {
+  background: transparent;
+  box-shadow: 0 0 20px 10px rgba(255, 143, 156, 0.5);
+}
+
+.btn:hover::before {
+  transform: translateX(100%);
+}
+
+.btn-ghost {
+  --btn-color: white;
+  --btn-bg: var(--primary-color);
+  --btn-border: 1px solid var(--btn-bg)
+}
+
+.btn-ghost {
+  --btn-color: var(--btn-bg);
+  --btn-border: 1px solid var(--btn-bg);
+  background: 0 0;
+  transition: .3s
+}
+
+.btn-ghost:hover {
+  --btn-color: white;
+}
+
+/* log-res form */
+.register-form,
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 40px;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109), 0 1px 1px rgba(128, 128, 128, 0.155), 0 2.1px 2.1px rgba(128, 128, 128, 0.195), 0 4.4px 4.4px rgba(128, 128, 128, 0.241), 0 12px 12px rgba(128, 128, 128, 0.35);
+}
+
+.register-form h2,
+.login-form h2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.register-form img,
+.login-form img {
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.register-form span,
+.login-form span {
+  font-size: 0.6rem;
+  margin-bottom: 0px;
+  font-weight: 600;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+/* row */
+.row-container{
+  margin:20px 0;
+}
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.row>.form-input-material {
+  flex: 1;
+  margin: 0 5px; 
+  width:130px;
+}
+
+/* forgot */
+.account .forgot {
+  font-size: 12px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+  color: #ff8f9c;
+}
+
+/* active */
+.active{
+  background: none;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Yuk Store</title>
+	<link rel="shortcut icon" href="/favicon.png" />
+
+	<!-- Load font awesome icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		crossorigin="anonymous">
+	<!-- simple line   -->
+	<link rel='stylesheet'
+		href='https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.2.4/css/simple-line-icons.min.css' />
+	<!--ionicon link-->
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+
+	<script src="js/Jquery/Jquery.min.js"></script>
+
+
+	<!-- font -->
+	<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" />
+
+	<!-- our files -->
+	<!-- css -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/topnav.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/account.css">
+	<link rel="stylesheet" href="css/cart.css">
+	<link rel="stylesheet" href="css/user.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<!-- js -->
+	<script src="data/products.js"></script>
+	<script src="js/classes.js"></script>
+	<script src="js/global.js"></script>
+	<script src="js/user.js"></script>
+
+</head>
+
+<body>
+	<script> addTopNav(); </script>
+
+	<section>
+		<script> addHeader(); </script>
+
+		<div class="infoUser">
+
+		</div>
+
+		<div class="listOrder"> </div>
+	</section>
+	<!-- End Section -->
+
+	<script>
+		AddContainAccount(); addPlc();
+	</script>
+
+	<div class="footer">
+		<script>addFooter();</script>
+	</div>
+
+	<i class="fa-solid fa-caret-up" id="goto-top-page" onclick="gotoTop()"></i>
+</body>
+
+</html>
